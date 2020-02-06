@@ -1,0 +1,175 @@
+
+Showing logs for build [32mjoenunnelley-flask-mailroom-mas-z6fls-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-l5z7f[0m
+{"level":"warn","ts":1580950915.8682623,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1580950915.8685412,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjoenunnelley-flask-mailroom-mas-z6fls-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-mcm45[0m
+{"level":"warn","ts":1580950918.8942518,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1580950918.8957427,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjoenunnelley-flask-mailroom-mas-z6fls-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjoenunnelley-flask-mailroom-mas-z6fls-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-joenunnelley-flask-mailroom-mas-z6fls-c4p76[0m
+{"level":"warn","ts":1580950943.6619787,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1580950944.0821538,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/************/flask-mailroom.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mjoenunnelley-flask-mailroom-mas-z6fls-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:13f8aabe3834985480a7a6f4df80a89f5fb42ba2
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjoenunnelley-flask-mailroom-mas-z6fls-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjoenunnelley-flask-mailroom-mas-z6fls-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mjoenunnelley-flask-mailroom-mas-z6fls-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image python:onbuild        
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:43780a8431c53f4afd734ad795e03127c0c607337a60639c5903a51a03535c22: no such file or directory 
+[36mINFO[0m[0001] Downloading base image python:onbuild        
+[36mINFO[0m[0001] Executing 3 build triggers                   
+[36mINFO[0m[0001] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0001] Checking for cached layer 283054561147.dkr.ecr.us-west-2.amazonaws.com/todo/cache:b3d06cabfdfe786e3895c6a0d4b9cef7b4ca81ad38b2d1cabb52ba10b4761d0a... 
+[36mINFO[0m[0002] No cached layer found for cmd RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0002] Unpacking rootfs as cmd RUN pip install --no-cache-dir -r requirements.txt requires it. 
+[36mINFO[0m[0016] Taking snapshot of full filesystem...        
+[36mINFO[0m[0022] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0022] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0022] Taking snapshot of files...                  
+[36mINFO[0m[0022] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0022] cmd: /bin/sh                                 
+[36mINFO[0m[0022] args: [-c pip install --no-cache-dir -r requirements.txt] 
+Collecting click==6.7 (from -r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/34/c1/8806f99713ddb993c5366c362b2f908f18269f8d792aff1abfd700775a77/click-6.7-py2.py3-none-any.whl (71kB)
+Collecting Flask==0.12.3 (from -r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/24/3e/1b6aa496fa9bb119f6b22263ca5ca9e826aaa132431fd78f413c8bcc18e3/Flask-0.12.3-py2.py3-none-any.whl (88kB)
+Collecting itsdangerous==0.24 (from -r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/dc/b4/a60bcdba945c00f6d608d8975131ab3f25b22f2bcfe1dab221165194b2d4/itsdangerous-0.24.tar.gz (46kB)
+Collecting Jinja2==2.10 (from -r requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/7f/ff/ae64bacdfc95f27a016a7bed8e8686763ba4d277a78ca76f32659220a731/Jinja2-2.10-py2.py3-none-any.whl (126kB)
+Collecting MarkupSafe==1.0 (from -r requirements.txt (line 5))
+  Downloading https://files.pythonhosted.org/packages/4d/de/32d741db316d8fdb7680822dd37001ef7a448255de9699ab4bfcbdf4172b/MarkupSafe-1.0.tar.gz
+Collecting passlib==1.7.2 (from -r requirements.txt (line 6))
+  Downloading https://files.pythonhosted.org/packages/11/b8/e9a78f3033228013ba8564adad8d0031bf9d39ea3acc3cdb9d55fabeb4ba/passlib-1.7.2-py2.py3-none-any.whl (507kB)
+Collecting peewee==3.2.2 (from -r requirements.txt (line 7))
+  Downloading https://files.pythonhosted.org/packages/31/2f/9e997ded058d746a22e8319c108a808ec7a1be7cf822b507023f08460e39/peewee-3.2.2.tar.gz (592kB)
+Collecting psycopg2==2.8.4 (from -r requirements.txt (line 8))
+  Downloading https://files.pythonhosted.org/packages/84/d7/6a93c99b5ba4d4d22daa3928b983cec66df4536ca50b22ce5dcac65e4e71/psycopg2-2.8.4.tar.gz (377kB)
+Collecting psycopg2-binary==2.7.4 (from -r requirements.txt (line 9))
+  Downloading https://files.pythonhosted.org/packages/5f/0b/aa7078d3f6d27d951c38b6a1f4b99b71b2caecebb2921b2d808b5bf0e2e0/psycopg2_binary-2.7.4-cp36-cp36m-manylinux1_x86_64.whl (2.7MB)
+Collecting Werkzeug==0.14.1 (from -r requirements.txt (line 10))
+  Downloading https://files.pythonhosted.org/packages/20/c4/12e3e56473e52375aa29c4764e70d1b8f3efa6682bef8d0aae04fe335243/Werkzeug-0.14.1-py2.py3-none-any.whl (322kB)
+Installing collected packages: click, itsdangerous, MarkupSafe, Jinja2, Werkzeug, Flask, passlib, peewee, psycopg2, psycopg2-binary
+  Running setup.py install for itsdangerous: started
+    Running setup.py install for itsdangerous: finished with status 'done'
+  Running setup.py install for MarkupSafe: started
+    Running setup.py install for MarkupSafe: finished with status 'done'
+  Running setup.py install for peewee: started
+    Running setup.py install for peewee: finished with status 'done'
+  Running setup.py install for psycopg2: started
+    Running setup.py install for psycopg2: finished with status 'done'
+Successfully installed Flask-0.12.3 Jinja2-2.10 MarkupSafe-1.0 Werkzeug-0.14.1 click-6.7 itsdangerous-0.24 passlib-1.7.2 peewee-3.2.2 psycopg2-2.8.4 psycopg2-binary-2.7.4
+You are using pip version 10.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0032] Taking snapshot of full filesystem...        
+[36mINFO[0m[0036] Pushing layer 283054561147.dkr.ecr.us-west-2.amazonaws.com/todo/cache:b3d06cabfdfe786e3895c6a0d4b9cef7b4ca81ad38b2d1cabb52ba10b4761d0a to cache now 
+[36mINFO[0m[0036] Using files from context: [/workspace/source] 
+[36mINFO[0m[0036] COPY . /usr/src/app                          
+[36mINFO[0m[0036] Taking snapshot of files...                  
+[36mINFO[0m[0036] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0036] COPY requirements.txt .                      
+[36mINFO[0m[0036] Taking snapshot of files...                  
+[36mINFO[0m[0036] ENV PORT 8080                                
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0036] EXPOSE 8080                                  
+[36mINFO[0m[0036] cmd: EXPOSE                                  
+[36mINFO[0m[0036] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0036] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0036] CMD ["app.py"]                               
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+[33mWARN[0m[0036] error uploading layer to cache: failed to push to destination 283054561147.dkr.ecr.us-west-2.amazonaws.com/todo/cache:b3d06cabfdfe786e3895c6a0d4b9cef7b4ca81ad38b2d1cabb52ba10b4761d0a: NAME_UNKNOWN: The repository with name 'todo/cache' does not exist in the registry with id '283054561147' 
+2020/02/06 01:03:02 pushed blob: sha256:dd4944bb7b6569c7b9a56c07471f35f1d4e0157ad56840fb90117c5252713c49
+2020/02/06 01:03:02 pushed blob: sha256:3d630a5cc5ce7bd193d0637f19f73b7e5578147edb2247c1b015acc6b1d8b353
+2020/02/06 01:03:02 pushed blob: sha256:8f836d607accb6696d1b57a88c7e3ef0238ad4c9ed9d6f73a317bde71895d639
+2020/02/06 01:03:02 pushed blob: sha256:e8ad65670f7ab4b7cffca2ad4edb15d4d1fa36ff7a988ff7d59985e44eb9e600
+2020/02/06 01:03:03 pushed blob: sha256:e2c0fb34dff3a1d32346b92e53fb88a14d1987b402a2348cb379c039687fabe2
+2020/02/06 01:03:03 pushed blob: sha256:490280dbcfb772eb5731f059e38fcfacaeb75b4d005af7c249fd51926db2bd62
+2020/02/06 01:03:03 pushed blob: sha256:e96bc319bce0351d1157092352bc5f85f8800c745388e60e86d06dec99285b45
+2020/02/06 01:03:03 pushed blob: sha256:2d21c767035c4593de8bf7ad9781aa83ba110871d1a50871192f4e3480e6f11d
+2020/02/06 01:03:04 pushed blob: sha256:e10b68fb77e6e91453cd4c1b02e2d77aa23a857cd8eb250617129d074478e1a5
+2020/02/06 01:03:04 pushed blob: sha256:df9102b458167094a88e01bf44ec1d60b2b0aedf79c66fe08537eb07f099b13f
+2020/02/06 01:03:05 pushed blob: sha256:ece825d3308bbf98f708d95475ccd880497a1e2979ff4ef2534d49049a18488f
+2020/02/06 01:03:06 pushed blob: sha256:06854774e2f35e4763103a446112c67322913a6177bea69eb49663e0166e6d6d
+2020/02/06 01:03:06 pushed blob: sha256:1c7fe136a31e13a1c879245672184ced3b9fc590989ba42a522a57b071a9c1aa
+2020/02/06 01:03:12 pushed blob: sha256:f0db43b9b8da254cebc77bf871006df01219e195b9853616b9f708f124a00f3a
+2020/02/06 01:03:12 283054561147.dkr.ecr.us-west-2.amazonaws.com/joenunnelley/flask-mailroom:0.0.1: digest: sha256:9adcff3e390375ea9b71f01a3d9cd819a454b11efd753311b677c26eeeabee20 size: 2384
+
+Showing logs for build [32mjoenunnelley-flask-mailroom-mas-z6fls-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjoenunnelley-flask-mailroom-mas-z6fls-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/flask-mailroom to an unshallow repository
+Generating change log from git ref d0720d9e1bab7c1de04f0be0e5654f00cac660fa => 01ee0b8edf09a925ac4329d0628d3d3283fde9c1
+Associating user x-0 in users.jenkins.io with email joe.nunnelley@tylertech.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 13f8aabe3834985480a7a6f4df80a89f5fb42ba2 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: Failed to enrich commit 9a5957d42e9763ec492d54695d2546a417a1dfb1 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 9a5957d42e9763ec492d54695d2546a417a1dfb1 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit fd02f859e1e8ea4eb0de4aebfc8f9a7b3d58f83a with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit fd02f859e1e8ea4eb0de4aebfc8f9a7b3d58f83a with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 174ae6215a1509123954718806637bd337445884 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 174ae6215a1509123954718806637bd337445884 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 28fabdb25e36986a59cd40e651d6c44c64efb52f with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 28fabdb25e36986a59cd40e651d6c44c64efb52f with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit ca685533efac543c5f86b698713dd44856cfd43c with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit ca685533efac543c5f86b698713dd44856cfd43c with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 329e26414f1eaf39530c0226e0672ec48abfbdbe with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 329e26414f1eaf39530c0226e0672ec48abfbdbe with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit e473c8189ee47e3f79b038545e2fb053aa53830d with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit e473c8189ee47e3f79b038545e2fb053aa53830d with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 1d75df10762ab881e25676fc1183656681dfc83c with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 1d75df10762ab881e25676fc1183656681dfc83c with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit d6c87b8329591fc90de67c800e6786f822223bfa with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit d6c87b8329591fc90de67c800e6786f822223bfa with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit b1cec9e05e5954e4c7baeda2da80f847aa128222 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit b1cec9e05e5954e4c7baeda2da80f847aa128222 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit f91678a1ff3a843aaf0218388cacb6b000fdcc21 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit f91678a1ff3a843aaf0218388cacb6b000fdcc21 with issues: users.jenkins.io "x-0" already exists
+WARNING: No release found for ************/flask-mailroom and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/************/flask-mailroom/releases/tag/v0.0.1
+generated: /workspace/source/charts/flask-mailroom/templates/release.yaml
+Created Release flask-mailroom-0-0-1 resource in namespace **
+Updating PipelineActivity joenunnelley-flask-mailroom-master-1 with version 0.0.1
+Updated PipelineActivities joenunnelley-flask-mailroom-master-1 with release notes URL: https://github.com/************/flask-mailroom/releases/tag/v0.0.1
+
+Showing logs for build [32mjoenunnelley-flask-mailroom-mas-z6fls-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file flask-mailroom-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mjoenunnelley-flask-mailroom-mas-z6fls-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app flask-mailroom version 0.0.1 to namespace **-staging
+WARNING: 
+Created Pull Request: https://github.com/************/environment-jenkinsdev-staging/pull/1
+Added label updatebot to Pull Request https://github.com/************/environment-jenkinsdev-staging/pull/1
+got git provider status pending from PR https://github.com/************/environment-jenkinsdev-staging/pull/1
+got git provider status pending from PR https://github.com/************/environment-jenkinsdev-staging/pull/1
+got git provider status pending from PR https://github.com/************/environment-jenkinsdev-staging/pull/1
+got git provider status pending from PR https://github.com/************/environment-jenkinsdev-staging/pull/1
+Pull Request https://github.com/************/environment-jenkinsdev-staging/pull/1 is merged at sha 7981cb7a729e30cec89444230b2b01b2021fb96e
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names flask-mailroom, **-flask-mailroom, **-staging-flask-mailroom
